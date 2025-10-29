@@ -5,22 +5,14 @@ Custom 360 is an end-to-end data analytics pipeline built on Microsoft Azure to 
 
 # 🛠️ Architecture Diagram
 
-Data Source (API/On-Prem) 
-        │
-        ▼
- Azure Data Factory (Ingestion & Orchestration)
-        │
-        ▼
- Bronze Layer – Azure Data Lake Storage (Raw Data)
-        │
-        ▼
- Silver Layer – Azure Databricks (Transformations using PySpark)
-        │
-        ▼
- Gold Layer – Azure SQL Database (Serving Layer)
-        │
-        ▼
- Power BI (Analytics & Dashboard)
+```mermaid
+flowchart LR
+    A[Data Source<br/>(API / On-Premise Systems)] --> B[Azure Data Factory<br/>(Ingestion & Orchestration)]
+    B --> C[Bronze Layer<br/>Azure Data Lake Storage<br/>(Raw Data)]
+    C --> D[Silver Layer<br/>Azure Databricks<br/>(Transformations using PySpark)]
+    D --> E[Gold Layer<br/>Azure SQL Database<br/>(Serving Layer)]
+    E --> F[Power BI<br/>(Analytics & Dashboard)]
+
 
 
 # 📂 Data Flow

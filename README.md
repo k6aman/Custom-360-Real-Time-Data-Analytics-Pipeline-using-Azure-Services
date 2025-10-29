@@ -3,15 +3,25 @@
 
 Custom 360 is an end-to-end data analytics pipeline built on Microsoft Azure to integrate, process, and analyze data from multiple sources using the Medallion Architecture (Bronze–Silver–Gold). The project automates data ingestion from APIs and on-premise systems, performs scalable transformations using Spark, and delivers analytics-ready data to empower business reporting in Power BI.
 
-# 🛠️ Architecture Diagram
+
+✅ This will render a **professional pipeline diagram** automatically on GitHub.
+
+---
+
+### ✨ Bonus – Improved Styling Version
+
+If you want a **cleaner vertical version** that looks better on GitHub:
+
+```md
+## 🛠️ Architecture Diagram
 
 ```mermaid
-flowchart LR
-    A[Data Source<br/>(API / On-Premise Systems)] --> B[Azure Data Factory<br/>(Ingestion & Orchestration)]
+flowchart TD
+    A[Data Source<br/>(API / On-Premise)] --> B[Azure Data Factory<br/>(Ingestion & Orchestration)]
     B --> C[Bronze Layer<br/>Azure Data Lake Storage<br/>(Raw Data)]
-    C --> D[Silver Layer<br/>Azure Databricks<br/>(Transformations using PySpark)]
-    D --> E[Gold Layer<br/>Azure SQL Database<br/>(Serving Layer)]
-    E --> F[Power BI<br/>(Analytics & Dashboard)]
+    C --> D[Silver Layer<br/>Azure Databricks<br/>(Data Transformations)]
+    D --> E[Gold Layer<br/>Azure SQL Database<br/>(Curated Data)]
+    E --> F[Power BI<br/>(Dashboards & Analytics)]
 
 
 

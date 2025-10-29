@@ -15,11 +15,3 @@ flowchart TD
     E --> F["Power BI (Analytics & Dashboard)"]
 
 
-# 📂 Data Flow
-
-1. Extract data from HTTP REST APIs and on-premise systems.
-2. Load raw data into Bronze layer (ADLS).
-3. Transform and clean data in Silver layer using Spark.
-4. Apply business logic & optimization.
-5. Load curated tables into Gold layer (Azure SQL DB).
-6. Connect dataset to Power BI for dashboarding.
